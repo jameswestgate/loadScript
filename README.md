@@ -16,7 +16,7 @@ All cache headers are respected and each file is only downloaded once. Debugging
 
 
 ```javascript
-load('cookie.js', function() {
+loadScript('cookie.js', function() {
   setCookie('login', new Date(), {expires: 90});
 });
 ```
@@ -27,7 +27,7 @@ The example above loads the _cookie.js_ file. Note that any code after the _load
 **Example 2**
 
 ```javascript
-load('employee.js', '/scripts/customer.min.js', function() {
+loadScript('employee.js', '/scripts/customer.min.js', function() {
  
   //Code to execute once the files are loaded
 }
@@ -39,9 +39,9 @@ In the example above, the _employee.js_ and the _customer.min.js_ files are adde
 **Example 3**
 
 ```javascript
-load('parent.js', function() {
+loadScript('parent.js', function() {
  
-  load('dependant.js', function() {
+  loadScript('dependant.js', function() {
 
     //Code to execute goes here
   });
